@@ -31,7 +31,6 @@ export default function ProjectSideBar({
               <button
                 className={cssClasses}
                 onClick={() => onSelectProject(project.id)}
-                
               >
                 {project.title}
               </button>
