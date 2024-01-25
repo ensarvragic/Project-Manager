@@ -1,5 +1,4 @@
 import Button from "./Button";
-import SelectedProject from "./SelectedProject";
 
 export default function ProjectSideBar({
   onStartAddProject,
@@ -18,10 +17,10 @@ export default function ProjectSideBar({
       <ul className="mt-8">
         {projects.map((project) => {
           let cssClasses =
-            "w-full text-left px-2 py-1 rounded-sm my-1 hover:text-stone-200 hover:bg-stone-800";
+            "w-full text-left px-2 py-1 rounded-sm my-1 hover:text-stone-400 hover:bg-stone-900";
 
           if (project.id === selectedProjectId) {
-            cssClasses += "bg-stone-800 text-stone-200";
+            cssClasses += "hover: bg-gray-600 text-stone-200";
           } else {
             cssClasses += "text-stone-400";
           }
