@@ -14,7 +14,7 @@ function App() {
   const handleAddTask () => {
 
   }
-  
+
   const handleDeleteTask () => {
     
   }
@@ -74,11 +74,16 @@ function App() {
   };
 
   const selectedProject = projectsState.projects.find(
-    (project) => projectsState.selectedProjectId
+    (project) => project.id === projectsState.selectedProjectId
   );
 
   let content = (
-    <SelectedProject project={selectedProject} onDelete={handleDeleteProject} />
+    <SelectedProject 
+    project={selectedProject} 
+    onDelete={handleDeleteProject} 
+    onAdd={handleAddTask}
+    onDeleteTask={handleDeleteTask}
+    />
   );
 
   if (projectsState.selectedProjectId === null) {
